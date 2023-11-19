@@ -6,17 +6,17 @@ public class RussainCompany extends CompanyBuilder{
     }
 
     @Override
-    void buildDirector(Identity director) {
+    void buildDirector(String director) {
         company.setDirector(director);
     }
 
     @Override
-    void buildManager(Identity manager) {
+    void buildManager(String manager) {
         company.setManager(manager);
     }
 
     @Override
-    void buildAccountant(Identity accountant) {
+    void buildAccountant(String accountant) {
         company.setAccountant(accountant);
     }
 }

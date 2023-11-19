@@ -1,6 +1,6 @@
-public class EnglishFactory implements LanguageFactory{
+public class EnglishFactory implements LanguageFactory {
     @Override
-    public Identity setIdentity(String name) {
-        return new English(name);
+    public Identity createIdentity(String name) {
+        return new Identity(name);
     }
 }

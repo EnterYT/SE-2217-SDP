@@ -12,34 +12,34 @@ public class Main {
 
         //Company, staff and their job
         //English Company
-            //Creating People
-        Identity adam = en.setIdentity("Adam");
-        Identity lorain = en.setIdentity("Lorain");
-        Identity gustavo = en.setIdentity("Gustavo");
+        //Creating People
+        Identity adam = en.createIdentity("Adam");
+        Identity lorain = en.createIdentity("Lorain");
+        Identity gustavo = en.createIdentity("Gustavo");
 
-            //Creating company and giving the job to people
+        //Creating company and giving the job to people
         CompanyBuilder enCompany = new EnglishCompany();
         enCompany.createCompany();
         enCompany.buildName("American Enterprise");
-        enCompany.buildDirector(adam);
-        enCompany.buildManager(lorain);
-        enCompany.buildAccountant(gustavo);
+        enCompany.buildDirector(adam.name);
+        enCompany.buildManager(lorain.name);
+        enCompany.buildAccountant(gustavo.name);
         System.out.println(enCompany.getInfo());
         System.out.println();
 
         //Russian Company
-            //Creating People
-        Identity egor = ru.setIdentity("Egor");
-        Identity dasha = ru.setIdentity("Dasha");
-        Identity laura = ru.setIdentity("Laura");
+        //Creating People
+        Identity egor = ru.createIdentity("Egor");
+        Identity dasha = ru.createIdentity("Dasha");
+        Identity laura = ru.createIdentity("Laura");
 
-            //Creating Company and giving job to people
+        //Creating Company and giving job to people
         CompanyBuilder ruCompany = new RussainCompany();
         ruCompany.createCompany();
         ruCompany.buildName("V Pluse");
-        ruCompany.buildDirector(egor);
-        ruCompany.buildManager(dasha);
-        ruCompany.buildAccountant(laura);
+        ruCompany.buildDirector(egor.name);
+        ruCompany.buildManager(dasha.name);
+        ruCompany.buildAccountant(laura.name);
         System.out.println(ruCompany.getInfo());
         System.out.println();
 
@@ -48,13 +48,13 @@ public class Main {
         ConcreteSubject RuSubject = new ConcreteSubject();
 
         //Adding Observers to the Subject
-            //English Hub
+        //English Hub
         ConcreteObserver max = new ConcreteObserver("Max");
         ConcreteObserver george = new ConcreteObserver("George");
         EnSubject.addObserver(max);
         EnSubject.addObserver(george);
 
-            //Russian hub
+        //Russian hub
         ConcreteObserver dima = new ConcreteObserver("Dima");
         ConcreteObserver pasha = new ConcreteObserver("Pasha");
         RuSubject.addObserver(dima);

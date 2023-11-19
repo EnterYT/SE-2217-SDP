@@ -1,21 +1,23 @@
 public abstract class CompanyBuilder {
-    Company company;
-    void createCompany(){
+    protected Company company;
+
+    void createCompany() {
         company = new Company();
     }
 
     abstract void buildName(String name);
-    abstract void buildDirector(Identity director);
-    abstract void buildManager(Identity manager);
-    abstract void buildAccountant(Identity accountant);
+    abstract void buildDirector(String director);
+    abstract void buildManager(String manager);
+    abstract void buildAccountant(String accountant);
 
     Company getCompany() {
         return company;
     }
-    public String getInfo(){
+
+    public String getInfo() {
         return "Company name: " + company.getName() +
-                "\n Company Director: "+company.getDirector()+
-                "\n Company Manager: "+company.getManager()+
-                "\n Company Accountant: "+company.getAccountant();
+                "\n Company Director: " + company.getDirector() +
+                "\n Company Manager: " + company.getManager() +
+                "\n Company Accountant: " + company.getAccountant();
     }
 }

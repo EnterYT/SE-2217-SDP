@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Company {
     private String name;
     private String director;
@@ -10,16 +8,16 @@ public class Company {
         this.name = name;
     }
 
-    public void setDirector(Identity director) {
-        this.director = director.name;
+    public void setDirector(String director) {
+        this.director = director;
     }
 
-    public void setManager(Identity manager) {
-        this.manager = manager.name;
+    public void setManager(String manager) {
+        this.manager = manager;
     }
 
-    public void setAccountant(Identity accountant) {
-        this.accountant = accountant.name;
+    public void setAccountant(String accountant) {
+        this.accountant = accountant;
     }
 
     public String getName() {
