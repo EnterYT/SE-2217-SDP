@@ -8,7 +8,8 @@ public class Main {
 
 
         //Translator(Adapter) for companies for understanding
-        Translator Translator = new Translator();
+        Translator translator = new Translator();
+        translator.translate();
 
         //Company, staff and their job
         //English Company
